@@ -1,67 +1,142 @@
-# Gemini Chatbot Chrome Extension
+<p align="center">
+  <img src="https://github.com/MetaVAI/chat-box-extension/blob/main/gemini_chatbot.jpg" alt="Gemini Chatbot Logo" />
+</p>
 
-## Overview
+<h1 align="center">🌐 Gemini Chatbot Chrome Extension</h1>
 
-This Chrome extension integrates a chatbot directly into your browsing experience, designed to provide contextual answers and insights based on the content of the currently viewed web page. It leverages the Gemini API for intelligent responses and utilizes a content extraction library to focus on relevant information.
+<p align="center">
+  Bring AI directly into your browsing experience.<br />
+  A Chrome extension that adds a smart, context-aware chatbot to any web page using Google’s Gemini API.
+</p>
 
-## Features
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green.svg" />
+  </a>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg" />
+  <!-- will Uncomment and update when published -->
+  <!-- <a href="https://chrome.google.com/webstore/detail/your-extension-id">
+    <img alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/v/your-extension-id.svg?label=Chrome%20Web%20Store" />
+  </a> -->
+</p>
 
-- **Contextual Chat:** Interact with a chatbot that understands and responds based on the active web page's content.
-- **Content Extraction:** Utilizes a robust Readability library to intelligently extract primary content from web pages, ensuring the chatbot focuses on meaningful text.
-- **User Interface:** Provides a clean and intuitive popup interface for chat interactions and an options page for configuration.
+---
 
-## Installation
+## 🚀 What Is It?
 
-To install this extension:
+**Gemini Chatbot** is a lightweight yet powerful Chrome extension that allows you to chat with an AI that _understands the page you're on_. Whether you're reading an article, researching a topic, or just browsing, the chatbot provides intelligent, contextual responses in real time.
 
-1.  Download or clone this repository to your local machine.
-2.  Open Google Chrome and navigate to `chrome://extensions`.
-3.  Enable **Developer mode** by toggling the switch in the top right corner.
-4.  Click on **Load unpacked** and select the directory where you cloned/downloaded this extension.
-5.  The Gemini Chatbot extension icon should now appear in your browser toolbar.
+Powered by [Gemini API](https://ai.google.dev/), and built for developers, researchers, and everyday users alike.
 
-## Usage
+---
 
-1.  Navigate to any web page.
-2.  Click on the Gemini Chatbot extension icon in your Chrome toolbar.
-3.  click on the three dots on the extension and enter you free gemini api key.
-4.  Type your question into the chat input field within the popup.
-5.  Receive contextual answers from the chatbot.
+## ✨ Features
 
-## Project Structure
+- 💬 **Context-Aware Chat**  
+  Ask questions and get answers _based on the content of the current web page_.
 
-- `manifest.json`: The core manifest file defining the extension's metadata, permissions, and entry points.
-- `background.js`: Handles background processes, event listeners, and inter-component communication within the extension. Likely manages API calls to the Gemini service.
-- `content.js`: Injected into active web pages to extract content and facilitate communication between the web page and the extension's background script.
-- `popup.html`: The HTML structure for the extension's interactive popup window.
-- `popup.js`: Manages the logic and user interactions within the popup, sending user queries and displaying chatbot responses.
-- `options.html`: The HTML page for configuring extension settings and preferences.
-- `options.js`: Handles the logic for saving and loading user-defined options.
-- `Readability.js`: A third-party library (likely a modified version) used for extracting clean, readable content from HTML documents.
-- `style.css`: Provides styling for the extension's user interface elements.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
-- `plan_of_actions.md`: Internal document outlining development plans, tasks, or notes.
+- 🧠 **Smart Content Extraction**  
+  Uses a custom implementation of the Readability library to focus only on meaningful text (no ads, footers, or clutter).
 
-## Development
+- 🖼️ **Minimal, Intuitive UI**  
+  Clean popup interface for chat. Simple options page for API key setup.
+
+- 🛠️ **Privacy-First Design**  
+  Content stays on your browser—only your prompts and extracted text are sent to Gemini.
+
+---
+
+## 🧩 Installation
+
+1. **Clone or download** this repository:
+
+   ```bash
+   git clone <repository-url>
+   cd gemini-chatbot-extension
+
+   ```
+
+2. Open Chrome and go to chrome://extensions.
+
+3. Enable Developer Mode (top-right toggle).
+
+4. Click Load Unpacked and select the folder where you cloned the extension.
+
+5. You’ll now see the Gemini Chatbot icon in your Chrome toolbar 🎉
+
+## 💡 How to Use
+
+1. Open any web page.
+
+2. Click the Gemini Chatbot icon in your Chrome toolbar.
+
+3. Click the three-dot menu and enter your free Gemini API key.
+
+4. Ask your question in the popup.
+
+5. Get instant, smart answers based on the page you’re viewing
+
+## 🗂️ Project Structure
+
+```
+📁 gemini-chatbot-extension/
+├── background.js         # Handles background logic and Gemini API calls
+├── content.js            # Injects into pages to extract content
+├── popup.html            # Chat interface UI
+├── popup.js              # Chat logic & frontend behavior
+├── options.html          # API key and user settings
+├── options.js            # Save/load settings
+├── Readability.js        # Clean content extraction
+├── style.css             # Styling for popup and options page
+├── manifest.json         # Chrome extension config
+└── .gitignore            # Ignore unneeded files
+```
+
+## 🛠️ Development
 
 ### Prerequisites
 
-- Node.js (for potential build tools or dependency management, if applicable)
-- Google Chrome browser
+Node.js (optional, for build tools or linting)
 
-### Getting Started
+Google Chrome browser
 
-1.  Clone the repository:
-    ```bash
-    git clone <repository-url>
-    cd chat-box
-    ```
-2.  Load the extension in Chrome as described in the [Installation](#installation) section.
+### Setup
 
-### Contributing
+```bash
+git clone https://github.com/MetaVAI/chat-box-extension.git
+cd gemini-chatbot-extension
+```
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Then follow the installation steps above to load it into Chrome.
 
-## License
+### 🤝 Contributing
 
-[Specify your license here, e.g., MIT, Apache 2.0, etc.]
+Contributions are not only welcome—they're encouraged! If you’ve got ideas, bug fixes, or improvements, feel free to:
+
+1. Fork the repo
+
+2. Create a new branch
+
+```bash
+git checkout -b feature/your-feature
+```
+
+3. Commit your changes
+
+```bash
+git commit -am 'Add some feature'
+```
+
+4. Push to your branch
+
+```bash
+git push origin feature/your-feature
+```
+
+5. Open a Pull Request!
+
+## 📄 License
+
+MIT — feel free to use, modify, and distribute this project under the terms of the license.
+
+> Built with 💬, ☕, and a sprinkle of Gemini intelligence.
